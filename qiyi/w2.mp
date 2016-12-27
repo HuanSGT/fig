@@ -17,7 +17,7 @@ filenametemplate "%j_%c.eps";
 
 % Line Lengths
 u := 5mm; % Unit Length
-l := 10u;
+l := 15u;
 lx := l * cosd(60);
 ly := l * sind(60);
 
@@ -32,14 +32,15 @@ cirs[1] := 2.5;
 cirs[2] := 1.5;
 cirs[3] := 1.0;
 
-lbs[1] := 2;
-lbs[2] := 1.5;
+lbs[1] := 2.5;
+lbs[2] := 1.75;
 lbs[3] := 1.0;
 
 color col[];
 col[1] := red;
 col[2] := blue;
-col[3] := (1,1,0); % yellow
+col[3] := green;
+col[4] := (1,1,0); % yellow
 
 numeric l[], diam[];
 l[1] := l;
@@ -73,15 +74,49 @@ vardef lbline(expr px, py, lb, lbs, gap) =
     label(lb scaled lbs,pl);
 enddef;
 
+vardef drawTT(expr pi, pj) =
+    pair pk;
+    pk := pi + ((pj - pi) rotated 60);
+    draw pi .. pj withpen pencircle scaled line[3];
+    draw pi .. pk withpen pencircle scaled line[3];
+    draw pj .. pk withpen pencircle scaled line[3];
+
+    drawCircle(pj, col[3], black, diam[3], cirs[3]);
+    drawCircle(pk, col[3], black, diam[3], cirs[3]);
+enddef;
+
+vardef drawT(expr px, py) = 
+    pair pz;
+    pz := px + ((py - px) rotated 60);
+
+    draw px .. py withpen pencircle scaled line[2];
+    draw px .. pz withpen pencircle scaled line[2];
+    draw py .. pz withpen pencircle scaled line[2];
+
+    lbline(py, px, btex $\pmb{2}$ etex, lbs[2], 0.09);
+    lbline(pz, py, btex $\pmb{2}$ etex, lbs[2], 0.09);
+    lbline(px, pz, btex $\pmb{2}$ etex, lbs[2], 0.09);
+
+    drawTT(pz, pz + (pz - px) / 2);
+    drawTT(py, py + (py - pz) / 2);
+
+    drawCircle(py, col[2], black, diam[2], cirs[2]);
+    drawCircle(pz, col[2], black, diam[2], cirs[2]);
+enddef;
+
 beginfig(1)
     pickup pencircle scaled dfts;
+
+    drawT(p[1], p[1] + (-l,0) / 2);
+    drawT(p[2], p[2] + (lx,ly) / 2);
+    drawT(p[3], p[3] + (lx,-ly) / 2);
 
     for i = 1 upto 3:
         for j = i + 1 upto 3:
             draw p[i] .. p[j] withpen pencircle scaled line[1];
-            lbline(p[i], p[j], btex $\pmb{4}$ etex, lbs[1], 0.08);
+            lbline(p[i], p[j], btex $\pmb{4}$ etex, lbs[1], 0.06);
         endfor;
-        drawCircle(p[i],col[1],black,diam[1],cirs[1]);
+        drawCircle(p[i], col[1], black, diam[1], cirs[1]);
     endfor;
 endfig;
 
