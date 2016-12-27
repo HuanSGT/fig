@@ -16,12 +16,21 @@ filenametemplate "%j_%c.eps";
 
 
 % Line Lengths
-u := 1mm; % Unit Length
+u := 3mm; % Unit Length
 l := 10u;
+lx := l * cosd(60);
+ly := l * sind(60);
 
 % Pencil Scales
+numeric line[], cirs[];
 dfts := 1.0;
-cirs := 1.0;
+line[1] := 3.0;
+line[2] := 2.0;
+line[3] := 1.0;
+
+cirs[1] := 2.5;
+cirs[2] := 1.5;
+cirs[3] := 1.0;
 
 color col[];
 col[1] := red;
@@ -33,11 +42,16 @@ l[1] := l;
 l[2] := l[1] / 2;
 l[3] := l[2] / 2;
 
-pair p[][];
-p[1][1] = (0,0);
-p[2][1] = (2,0);
+diam[1] := 2u; 
+diam[2] := 1.5u;
+diam[3] := 1.0u;
 
-vardef drawCircle(expr loc, interCol, outlineCol, diameter) =
+pair p[];
+p[1] = (0,0);
+p[2] = p[1] + (lx,ly);
+p[3] = p[1] + (l,0);
+
+vardef drawCircle(expr loc, interCol, outlineCol, diameter, cirs) =
     pen prepen;
     prepen := currentpen;
     pickup pencircle scaled cirs;
@@ -50,8 +64,13 @@ enddef;
 
 beginfig(1)
     pickup pencircle scaled dfts;
-    drawCircle(p[1][1],col[3],black,l[2]);
-    drawCircle(p[2][1],col[1],black,10u);
+
+    for i = 1 upto 3:
+        for j = i + 1 upto 3:
+            draw p[i] .. p[j] withpen pencircle scaled line[1];
+        endfor;
+        drawCircle(p[i],col[i],black,diam[1],cirs[1]);
+    endfor;
 endfig;
 
 end;
