@@ -1,0 +1,29 @@
+%&LaTeX
+\documentclass{article}
+usepackage{amsmath}
+usepackage{amssymb}
+\begin{document}
+
+\gdef\mpxshipout{\shipout\hbox\bgroup
+  \setbox0=\hbox\bgroup}
+\gdef\stopmpxshipout{\egroup  \dimen0=\ht0 \advance\dimen0\dp0
+  \dimen1=\ht0 \dimen2=\dp0
+  \setbox0=\hbox\bgroup
+    \box0
+    \ifnum\dimen0>0 \vrule width1sp height\dimen1 depth\dimen2 
+    \else \vrule width1sp height1sp depth0sp\relax
+    \fi\egroup
+  \ht0=0pt \dp0=0pt \box0 \egroup}
+\mpxshipout% line 23 ./r_tmp.mp
+$(1)$%
+\stopmpxshipout
+\mpxshipout% line 30 ./r_tmp.mp
+$(2)$%
+\stopmpxshipout
+\mpxshipout% line 39 ./r_tmp.mp
+$(3)$%
+\stopmpxshipout
+\mpxshipout% line 48 ./r_tmp.mp
+$(4)$%
+\stopmpxshipout
+\end{document}

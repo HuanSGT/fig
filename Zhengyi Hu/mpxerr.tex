@@ -1,0 +1,80 @@
+%&LaTeX
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\begin{document}
+
+\gdef\mpxshipout{\shipout\hbox\bgroup
+  \setbox0=\hbox\bgroup}
+\gdef\stopmpxshipout{\egroup  \dimen0=\ht0 \advance\dimen0\dp0
+  \dimen1=\ht0 \dimen2=\dp0
+  \setbox0=\hbox\bgroup
+    \box0
+    \ifnum\dimen0>0 \vrule width1sp height\dimen1 depth\dimen2 
+    \else \vrule width1sp height1sp depth0sp\relax
+    \fi\egroup
+  \ht0=0pt \dp0=0pt \box0 \egroup}
+\mpxshipout% line 66 ./self_bold.mp
+$\pmb{F}_{t-1}^{\scriptscriptstyle (1)}$%
+\stopmpxshipout
+\mpxshipout% line 67 ./self_bold.mp
+$\pmb{v}_1^{\scriptscriptstyle (1)}$%
+\stopmpxshipout
+\mpxshipout% line 68 ./self_bold.mp
+$\pmb{v}_2^{\scriptscriptstyle (1)}$%
+\stopmpxshipout
+\mpxshipout% line 76 ./self_bold.mp
+$\pmb{F}_{t-1}^{\scriptscriptstyle (1)}$%
+\stopmpxshipout
+\mpxshipout% line 84 ./self_bold.mp
+$\pmb{F}_{t-1}^{\scriptscriptstyle (4)}$%
+\stopmpxshipout
+\mpxshipout% line 85 ./self_bold.mp
+$\pmb{v}_1^{\scriptscriptstyle (4)}$%
+\stopmpxshipout
+\mpxshipout% line 86 ./self_bold.mp
+$\pmb{v}_2^{\scriptscriptstyle (4)}$%
+\stopmpxshipout
+\mpxshipout% line 94 ./self_bold.mp
+$\pmb{F}_{t-1}^{\scriptscriptstyle (4)}$%
+\stopmpxshipout
+\mpxshipout% line 102 ./self_bold.mp
+$\pmb{F}_{t-1}^{\scriptscriptstyle (2)}$%
+\stopmpxshipout
+\mpxshipout% line 103 ./self_bold.mp
+$\pmb{v}_\pmb{1}^{\scriptscriptstyle \scriptscriptstyle (2)}$%
+\stopmpxshipout
+\mpxshipout% line 104 ./self_bold.mp
+$\pmb{v}_2^{\scriptscriptstyle \scriptscriptstyle (2)}$%
+\stopmpxshipout
+\mpxshipout% line 112 ./self_bold.mp
+$\pmb{F}_{t-1}^{\scriptscriptstyle (2)}$%
+\stopmpxshipout
+\mpxshipout% line 120 ./self_bold.mp
+$\pmb{F}_{t-1}^{\scriptscriptstyle (3)}$%
+\stopmpxshipout
+\mpxshipout% line 121 ./self_bold.mp
+$\pmb{v}_2^{\scriptscriptstyle (3)}$%
+\stopmpxshipout
+\mpxshipout% line 122 ./self_bold.mp
+$\pmb{v}_1^{\scriptscriptstyle (3)}$%
+\stopmpxshipout
+\mpxshipout% line 130 ./self_bold.mp
+$\pmb{F}_{t-1}^{\scriptscriptstyle (3)}$%
+\stopmpxshipout
+\mpxshipout% line 208 ./self_bold.mp
+$\pmb{v}_1$%
+\stopmpxshipout
+\mpxshipout% line 209 ./self_bold.mp
+$\pmb{v}_2$%
+\stopmpxshipout
+\mpxshipout% line 210 ./self_bold.mp
+$\pmb{v}_3$%
+\stopmpxshipout
+\mpxshipout% line 211 ./self_bold.mp
+$\pmb{v}_4$%
+\stopmpxshipout
+\mpxshipout% line 213 ./self_bold.mp
+$\Rightarrow$%
+\stopmpxshipout
+\end{document}
