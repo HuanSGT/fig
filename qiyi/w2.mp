@@ -44,8 +44,8 @@ lbs[3] := 1.5;
 color col[];
 col[1] := red;
 col[2] := blue;
-col[3] := green;
-col[4] := (1,1,0); % yellow
+col[4] := green;
+col[3] := (1,1,0); % yellow
 
 numeric l[], diam[];
 l[1] := l;
@@ -55,8 +55,8 @@ l[4] := l / 4;
 
 diam[1] := 2u; 
 diam[2] := 1.5u;
-diam[3] := 1.0u;
-diam[4] := 1.0u;
+diam[3] := 1u;
+diam[4] := 1u;
 
 pair p[];
 p[1] = (0,0);
@@ -140,10 +140,13 @@ beginfig(1)
     drawD(p[2], p[2] + (-lx,-ly) / 3);
     drawD(p[3], p[3] + (-lx,ly)  / 3);
 
+    lbline(p[1], p[2], btex $\pmb{4}$ etex, lbs[1], 0.06);
+    lbline(p[2], p[3], btex $\pmb{4}$ etex, lbs[1], 0.06);
+    lbline(p[3], p[1], btex $\pmb{4}$ etex, lbs[1], 0.06);
+
     for i = 1 upto 3:
         for j = i + 1 upto 3:
             draw p[i] .. p[j] withpen pencircle scaled line[1];
-            lbline(p[i], p[j], btex $\pmb{4}$ etex, lbs[1], 0.06);
         endfor;
         drawCircle(p[i], col[1], black, diam[1], cirs[1]);
     endfor;
