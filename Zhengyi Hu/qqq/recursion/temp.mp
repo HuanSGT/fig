@@ -53,7 +53,7 @@ enddef;
 vardef drawDircle(expr loc, interCol, outlineCol, radius, lbl)=
 
     fill fullcircle scaled radius shifted loc withcolor interCol;
-    draw fullcircle scaled radius shifted loc withcolor outlineCol dashed evenly;
+    draw fullcircle scaled radius shifted loc withcolor outlineCol dashed evenly scaled 4;
 
     draw thelabel(lbl,loc) withcolor outlineCol;
 enddef;

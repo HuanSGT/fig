@@ -28,14 +28,14 @@ eta   := (60 - theta) / 2;
 numeric line[], cirs[], lbs[];
 dfts := 1.0;
 line[1] := 3.0;
-line[2] := 2.0;
-line[3] := 1.0;
-line[4] := 1.0;
+line[2] := 2.5;
+line[3] := 2.0;
+line[4] := 2.0;
 
 cirs[1] := 2.5;
-cirs[2] := 1.5;
-cirs[3] := 1.0;
-cirs[4] := 1.0;
+cirs[2] := 2.0;
+cirs[3] := 1.5;
+cirs[4] := 1.5;
 
 lbs[1] := 2.5;
 lbs[2] := 2;
@@ -43,9 +43,9 @@ lbs[3] := 1.5;
 
 color col[];
 col[1] := red;
-col[2] := blue;
+col[2] := (1,1,0); %blue;
 col[4] := green;
-col[3] := (1,1,0); % yellow
+col[3] := green; % yellow
 
 numeric l[], diam[];
 l[1] := l;

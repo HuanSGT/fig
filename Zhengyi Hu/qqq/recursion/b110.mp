@@ -69,7 +69,7 @@ vardef drawDircle(expr loc, interCol, outlineCol, radius, lbl)=
 
 
     fill fullcircle scaled radius shifted loc withcolor interCol;
-    draw fullcircle scaled radius shifted loc withcolor outlineCol dashed evenly;
+    draw fullcircle scaled radius shifted loc withcolor outlineCol dashed withdots scaled 2 withpen pencircle scaled 3.5;
 
     pickup prepen;
 
@@ -184,7 +184,7 @@ beginfig(1)
     r1 := 1; g1 := 0; b1 := 0;
     r2 := 0; g2 := 0.8; b2 := 0;
     r3 := 0; g3 := 0; b3 := 1;
-    r4 := r1; g4 := 0; b4 := b3;
+    r4 := 0.25; g4 := 0.25; b4 := 0.25;
 
     kk := 2;
     rv1 := (r1 + r4) / kk; gv1 := (g1 + g4) / kk; bv1 := (b1 + b4) / kk;
