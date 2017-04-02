@@ -9,7 +9,7 @@ verbatimtex
 etex
 
 prologues := 3; %加入字体
-filenametemplate "%j_%c.eps";
+%filenametemplate "%j_%c.eps";
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -221,5 +221,3 @@ beginfig(1)
     %drawG(coor[0] + dx,0,0,0,0,1,0,0,0,0);
     %drawGG(coor[0] + 1.3dx,0,0,0,0,0,0,0,0,0);
 endfig;
-
-end;

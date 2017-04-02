@@ -50,7 +50,7 @@ beginfig(1)
 	drawG  (coor + 1dx, 2,1,0,1,0,0,0,2,2, btex $\gamma_n^1+\phi_n^1+\xi_n^0-1$ etex scaled qs0);
 	drawG  (coor + 2dx, 2,1,2,1,0,0,0,0,2, btex $\gamma_n^1+\phi_n^0+\xi_n^1-1$ etex scaled qs0);
 	drawG  (coor + 3dx, 2,1,0,1,0,0,0,0,2, btex $\gamma_n^1+\phi_n^1+\phi_n^0-1$ etex scaled qs0);
-	drawG  (coor + 4dx, 2,1,2,1,0,0,0,2,2, btex $\gamma_n^1+\phi_n^1+\phi_n^0-1$ etex scaled qs0);
+	drawG  (coor + 4dx, 2,1,2,1,0,0,0,2,2, btex $\gamma_n^1+\xi_n^1+\xi_n^0-1$ etex scaled qs0);
 	coor := coor + dy;
 	drawGG (coor + dxx, 2,1,0,1,0,1,0,1,2);
 	label.lft(btex $(d)$ etex scaled qs1, coor + dxx + dnum);

@@ -48,7 +48,7 @@ beginfig(1)
 	drawG  (coor + 0dx, 2,1,2,1,1,2,0,0,2, btex $\phi_n^2+\phi_n^0+\xi_n^1-1$ etex scaled qs0);
 	drawG  (coor + 1dx, 2,1,0,1,1,0,2,2,2, btex $\gamma_n^2+\phi_n^1+\eta_n-1$ etex scaled qs0);
 	drawG  (coor + 2dx, 2,1,2,1,1,0,0,2,2, btex $\gamma_n^2+\xi_n^1+\xi_n^0-1$ etex scaled qs0);
-	drawG  (coor + 3dx, 2,1,0,1,1,0,2,0,2, btex $\phi_n^2+\phi_n^1+\xi_n^0-1$ etex scaled qs0);
+	drawG  (coor + 3dx, 2,1,0,1,1,0,2,0,2, btex $\gamma_n^2+\phi_n^1+\xi_n^0-1$ etex scaled qs0);
 	drawG  (coor + 4dx, 2,1,0,1,1,0,0,2,2, btex $\gamma_n^2+\phi_n^1+\xi_n^0-1$ etex scaled qs0);
 	drawG  (coor + 5dx, 2,1,0,1,1,2,0,0,2, btex $\phi_n^2+\phi_n^1+\phi_n^0-1$ etex scaled qs0);
 	coor := coor + dy;
