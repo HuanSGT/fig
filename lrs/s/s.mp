@@ -186,8 +186,7 @@ vardef drawGG(expr loc, a,b,c,d,e,f,g,h,i) =
     drawT(lc1, black, d,e,f);
     drawT(lc2, black, g,h,i);
 
-    draw thelabel(btex $:$ etex scaled 5, lc0 + (2len + 3di, 0.23heightG));
-% withcolor (0.8,0.8,0.8);
+    draw thelabel(btex $:$ etex scaled 5, lc0 + (2len + 3di, 0.23heightG)); % withcolor (0.8,0.8,0.8);
 enddef;
 
 beginfig(1)
