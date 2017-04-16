@@ -30,6 +30,7 @@ beginfig(1)
 	drawG  (coor + 3dx, 0,0,2,0,0,0,0,2,0, btex $\gamma_n^0+2\phi_n^0$ etex scaled qs0);
 	drawG  (coor + 4dx, 0,0,0,0,0,0,2,0,0, btex $2\gamma_n^0+\phi_n^0$ etex scaled qs0);
 	drawG  (coor + 5dx, 0,0,0,0,0,0,0,0,0, btex $3\gamma_n^0$ etex scaled qs0);
+
 	coor := coor + dy;
 	drawGG (coor + dxx, 0,0,0,0,0,1,0,1,0);
 	label.lft(btex $(b)$ etex scaled qs1, coor + dxx + dnum);
@@ -39,11 +40,13 @@ beginfig(1)
 	drawG  (coor + 3dx, 0,0,2,0,0,1,0,1,0, btex $2\gamma_n^1+\phi_n^0-1$ etex scaled qs0);
 	drawG  (coor + 4dx, 0,0,0,0,0,1,2,1,0, btex $\gamma_n^1+\gamma_n^0+\phi_n^1-1$ etex scaled qs0);
 	drawG  (coor + 5dx, 0,0,0,0,0,1,0,1,0, btex $2\gamma_n^1+\gamma_n^0-1$ etex scaled qs0);
+
 	coor := coor + dy;
 	drawGG (coor + dxx, 0,0,1,0,0,1,1,1,0);
 	label.lft(btex $(c)$ etex scaled qs1, coor + dxx + dnum);
 	drawG  (coor + 0dx, 0,2,1,0,0,1,1,1,0, btex $\gamma_n^2+\gamma_n^1+\phi_n^1-2$ etex scaled qs0);
 	drawG  (coor + 1dx, 0,0,1,0,0,1,1,1,0, btex $\gamma_n^2+2\gamma_n^1-2$ etex scaled qs0);
+
 	coor := coor + dy;
 	drawGG (coor + dxx, 0,1,1,1,0,1,1,1,0);
 	label.lft(btex $(d)$ etex scaled qs1, coor + dxx + dnum);
