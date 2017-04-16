@@ -1,0 +1,38 @@
+2A_n + D_n
+1
+1 1 1   0 0 0   0 0 0
+rot no
+
+A_n + B_n + C_n
+4
+0 1 1   0 0 0   1 0 0
+rot flip
+1 1 0   0 0 0   0 0 1
+rot flip
+1 1 0   0 0 0   0 1 0
+rot flip
+1 1 0   0 1 0   0 0 0
+rot flip
+
+3B_n
+3
+0 1 0   0 1 0   1 0 0
+rot no
+0 0 1   0 1 0   1 0 0
+rot no
+0 0 1   0 0 1   1 0 0
+rot no
+
+A_n + 2B_n
+3
+0 1 0   0 1 0   0 0 0
+rot no
+0 0 1   0 1 0   0 0 0
+rot no
+0 0 1   0 0 1   0 0 0
+rot no
+
+2A_n + C_n
+1
+0 1 1   0 0 0   0 0 0
+rot no
