@@ -1,0 +1,21 @@
+A_n + B_n + C_n
+1
+0 1 1   0 1 0   0 0 0
+rot flip
+
+A_n + B_n + D_n
+1
+1 1 1   0 1 0   0 0 0
+rot flip
+
+3B_n
+1
+0 1 0   0 1 0   0 0 1
+no flip
+
+2B_n + C_n
+2
+0 1 1   1 0 0   0 1 0
+rot flip
+1 1 0   0 1 0   0 0 1
+rot flip
