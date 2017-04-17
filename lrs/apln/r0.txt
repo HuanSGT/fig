@@ -1,0 +1,19 @@
+3\gamma_n^0
+1
+0 0 0   0 0 0   0 0 0
+no no
+
+2\gamma_n^0 + \gamma_n^1
+1
+0 0 0   1 0 0   0 0 0
+rot no
+
+\gamma_n^0 + 2\gamma_n^1 - 1
+1
+0 0 0   1 0 0   1 0 0
+rot no
+
+3\gamma_n^1 - 2
+1
+1 0 0   1 0 0   1 0 0
+no no

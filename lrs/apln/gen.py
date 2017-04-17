@@ -60,7 +60,7 @@ def draw(cs):
         code = code + code_dyy
     code = code + (code_drawG % (cnt - 1, cs))
 
-files = ['A','B','C','D']
+files = ['A','B','C','D','r0']
 
 for file_name in files:
     code = ''
