@@ -32,7 +32,7 @@ enddef;
 
 u := 1mm;
 
-di := 5u;
+di := 5.5u;
 
 len := 20u;
 lenx := len * cosd 60;
@@ -69,14 +69,14 @@ enddef;
 gapx := di;% - 1u;
 gapy := di;% + 1u;
 
-widthG = 3 * len + 25u;
-heightG = 3 * leny + 20u;
+widthG = 2 * len + line + 25u;
+heightG = 2 * leny + liney + 20u;
 
 pair dx, dy, dxx, dyy;
 dx  := (widthG, 0);
-dy  := (0, -heightG - 5u);
-dyy := (0, -heightG + 7.5u);
-dxx := (- lenx - 20u, 0);
+dy  := (0, -heightG - 7.5u);
+dyy := (0, -heightG + 2.5u);
+dxx := (- lenx - 35u, - 0.45heightG);
 
 %         0
 %       1   2
@@ -104,7 +104,7 @@ vardef drawG(expr locTT, a,b,c, d,e,f, g,h,i, x,y,z) =
 
     drawT(loccTT0, a,b,c);
     drawT(loccTT1, d,e,f);
-    drawT(loccTT2, g,i,h);
+    drawT(loccTT2, g,h,i);
 enddef;
    
 beginfig(1)
@@ -118,5 +118,3 @@ beginfig(1)
     drawG((0,-heightG), 1,0,0, 0,1,0, 0,0,1, 1,0,1);
 
 endfig;
-
-end;
