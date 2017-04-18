@@ -85,22 +85,22 @@ dxx := (- lenx - 35u, - 0.45heightG);
 % 4   5 [11]  7   8
 %
 
-vardef drawLine(expr x, y, matched) =
+vardef drawLine(expr x, y, a,b) =
     draw x .. y;
-    if matched = 1:
+    if (a = 0) and (b = 0):
         draw x .. y withcolor red withpen pencircle scaled matched_scale;
     fi
 enddef;
 
-vardef drawG(expr locTT, a,b,c, d,e,f, g,h,i, x,y,z) =
+vardef drawG(expr locTT, a,b,c, d,e,f, g,h,i) =
     pair loccTT[];
     loccTT0 := locTT;
     loccTT1 := loccTT0 + (- linex - lenx, - liney - leny);
     loccTT2 := loccTT0 + (linex +  lenx, - liney - leny);
 
-    drawLine(loccTT0 + (- lenx, - leny), loccTT1, x);
-    drawLine(loccTT0 + (lenx, - leny), loccTT2, y);
-    drawLine(loccTT1 + (lenx, -leny), loccTT2 + (-lenx,-leny), z);
+    drawLine(loccTT0 + (- lenx, - leny), loccTT1, b,d);
+    drawLine(loccTT0 + (lenx, - leny), loccTT2, c,g);
+    drawLine(loccTT1 + (lenx, -leny), loccTT2 + (-lenx,-leny), f,h);
 
     drawT(loccTT0, a,b,c);
     drawT(loccTT1, d,e,f);
@@ -112,9 +112,9 @@ beginfig(1)
 
     %drawG((-widthG,heightG), 1,0,0, 0,1,0, 0,0,1, 0,1,0);
     %drawG((0,heightG), 1,0,0, 0,1,0, 0,0,1, 1,0,1);
-    drawG((0,0), 1,0,0, 0,1,0, 0,0,1, 1,1,1);
-    drawG((widthG,0), 1,0,0, 0,1,0, 0,0,1, 0,0,0);
-    drawG((widthG,-heightG), 1,0,0, 0,1,0, 0,0,1, 0,1,0);
-    drawG((0,-heightG), 1,0,0, 0,1,0, 0,0,1, 1,0,1);
+    drawG((0,0), 1,0,0, 0,1,0, 0,0,1);
+    drawG((widthG,0), 1,0,0, 0,1,0, 0,0,1);
+    drawG((widthG,-heightG), 1,0,0, 0,1,0, 0,0,1);
+    drawG((0,-heightG), 1,0,0, 0,1,0, 0,0,1);
 
 endfig;

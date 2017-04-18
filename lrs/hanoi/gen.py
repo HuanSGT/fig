@@ -42,13 +42,15 @@ def gets(f):
 
 def rotate(cs):
     tmp = cs.split(',')
-    tmp[4],tmp[5],tmp[3],tmp[7],tmp[8],tmp[6],tmp[1],tmp[2],tmp[0],tmp[11],tmp[9],tmp[10] = tmp[:]
+    #tmp[4],tmp[5],tmp[3],tmp[7],tmp[8],tmp[6],tmp[1],tmp[2],tmp[0],tmp[11],tmp[9],tmp[10] = tmp[:]
+    tmp[4],tmp[5],tmp[3],tmp[7],tmp[8],tmp[6],tmp[1],tmp[2],tmp[0] = tmp[:]
     return ','.join(tmp)
 
 def flip(cs):
     tmp = cs.split(',')
     print tmp
-    tmp[0],tmp[2],tmp[1],tmp[6],tmp[8],tmp[7],tmp[3],tmp[5],tmp[4],tmp[10],tmp[9],tmp[11] = tmp[:]
+    #tmp[0],tmp[2],tmp[1],tmp[6],tmp[8],tmp[7],tmp[3],tmp[5],tmp[4],tmp[10],tmp[9],tmp[11] = tmp[:]
+    tmp[0],tmp[2],tmp[1],tmp[6],tmp[8],tmp[7],tmp[3],tmp[5],tmp[4] = tmp[:]
     print tmp
     return ','.join(tmp)
 
@@ -60,7 +62,7 @@ def draw(cs):
         code = code + code_dyy
     code = code + (code_drawG % (cnt - 1, cs))
 
-files = ['As']
+files = ['AS']
 
 for file_name in files:
     code = ''
