@@ -1,0 +1,35 @@
+B_n^* + 2C_n^* + 1
+4
+1 0 0   0 1 1   1 1 0
+rot flip
+0 1 0   0 1 1   0 1 1
+rot flip
+0 1 0   1 1 0   1 0 1
+rot flip
+0 1 0   1 1 0   0 1 1
+rot flip
+
+B_n^* + C_n^* + D_n^* + 1
+1
+1 1 1   1 1 0   1 0 0
+rot flip
+
+B_n^* + 2D_n^*
+1
+0 1 0   1 1 1   1 1 1
+rot flip
+
+3C_n^* + 1
+1
+0 1 1   1 1 0   1 0 1
+rot no
+
+2C_n^* + D_n^*
+1
+1 1 1   1 1 0   1 1 0
+rot flip
+
+C_n^* + 2D_n^*
+1
+0 1 1   1 1 1   1 1 1
+rot no
