@@ -45,6 +45,25 @@ liney := line * sind 60;
 widthT  := 2 * lenx;
 heightT := leny;
 
+color yellow;
+yellow := (1,1,0);
+
+vardef drawC(expr locC, col) =
+    if col = 0:
+        drawCircle(locC, white,  black, di);
+    elseif col = 1:
+        drawCircle(locC, black,  black, di);
+    elseif col = 2:
+        drawCircle(locC, red, black, di);
+    elseif col = 3:
+        drawCircle(locC, green, black, di);
+    elseif col = 4:
+        drawCircle(locC, blue, black, di);
+    elseif col = 5:
+        drawCircle(locC, yellow, black, di);
+    fi
+enddef;
+
 vardef drawT(expr locT, cola, colb, colc) = 
     pair loccT[];
     loccT0 := locT;
@@ -57,12 +76,9 @@ vardef drawT(expr locT, cola, colb, colc) =
 
     numeric cols[];
     cols0 := cola; cols1 := colb; cols2 := colc;
+
     for i=0 upto 2:
-        if cols[i] = 0:
-            drawCircle(loccT[i], white,  black, di);
-        else:
-            drawCircle(loccT[i], black,  black, di);
-        fi
+        drawC(loccT[i], cols[i]);
     endfor;
 enddef;
 
@@ -106,15 +122,45 @@ vardef drawG(expr locTT, a,b,c, d,e,f, g,h,i) =
     drawT(loccTT1, d,e,f);
     drawT(loccTT2, g,h,i);
 enddef;
+
+lline = line * 1.2;
+llinex := lline * cosd 60;
+lliney := lline * sind 60;
+
+vardef drawH(expr locH,
+    a,b,c,   d,e,f,   g,h,i,
+    a_,b_,c_,   d_,e_,f_,   g_,h_,i_,
+    a__,b__,c__,   d__,e__,f__,   g__,h__,i__,   j) =
+
+    pair loccH[];
+    loccH0 := locH;
+    loccH1 := loccH0 + (- llinex - linex - len, - lliney - liney - 2 * leny);
+    loccH2 := loccH0 + (  llinex + linex + len, - lliney - liney - 2 * leny);
+
+    drawLine(loccH0 + (- len, - 2 * leny), loccH1, 1,1);
+    drawLine(loccH0 + (len, - 2 * leny), loccH2, 1,1);
+    drawLine(loccH1 + (len + linex, - 2 * leny - liney), loccH2 + (-len - linex,- 2 * leny - liney), 1,1);
+
+    drawG(loccH0, a,b,c,   d,e,f,   g,h,i);
+    drawG(loccH1, a_,b_,c_,   d_,e_,f_,   g_,h_,i_);
+    drawG(loccH2, a__,b__,c__,   d__,e__,f__,   g__,h__,i__);
+
+enddef;
    
+% r g b y
+% 2 3 4 5
+%
 beginfig(1)
     pickup pencircle scaled default_scale;
 
     %drawG((-widthG,heightG), 1,0,0, 0,1,0, 0,0,1, 0,1,0);
     %drawG((0,heightG), 1,0,0, 0,1,0, 0,0,1, 1,0,1);
-    drawG((0,0), 1,0,0, 0,1,0, 0,0,1);
-    drawG((widthG,0), 1,0,0, 0,1,0, 0,0,1);
-    drawG((widthG,-heightG), 1,0,0, 0,1,0, 0,0,1);
-    drawG((0,-heightG), 1,0,0, 0,1,0, 0,0,1);
+    %drawG((0,0), 0,1,2,3,4,5,0,1,2);
+    drawH((widthG,0),
+            4,5,2,  3,4,2,  3,5,4,
+            5,3,2,  4,5,2,  4,3,5,
+            2,5,3,  4,2,3,  4,5,2,  3);
 
 endfig;
+
+end;
