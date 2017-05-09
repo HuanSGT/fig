@@ -174,7 +174,7 @@ beginfig(1)
 
     label(btex $\Rightarrow$ etex xscaled 3.5 yscaled 5, (1.15widthT, 0.5heightT));
 
-    gapx := 0; gapy := 0;
+    %gapx := 0; gapy := 0;
     drawGl((2.2widthT,0), btex $O$ etex scaled vs,
                      btex $Y$ etex scaled vs,
                      btex $Z$ etex scaled vs,
@@ -188,7 +188,4 @@ beginfig(1)
                      btex $$ etex scaled vs,
                      btex $\mathcal{A}_n^2$ etex scaled gen_scale);
     label(btex $X$ etex scaled vs, (2.2widthT, 2heightT + 1.15di));
-
 endfig;
-
-end;

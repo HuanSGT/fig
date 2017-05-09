@@ -1,8 +1,9 @@
-This is MetaPost, version 1.999 (TeX Live 2015) (kpathsea version 6.2.1)  16 APR 2017 19:23
+This is MetaPost, version 1.999 (TeX Live 2015) (kpathsea version 6.2.1)  9 MAY 2017 23:18
 **D.mp
 (/usr/local/texlive/2015/texmf-dist/metapost/base/mpost.mp
 (/usr/local/texlive/2015/texmf-dist/metapost/base/plain.mp
-Preloading the plain mem file, version 1.005) ) (./D.mp (./s.mp [1]) [1{psfonts
-.map}<cmmi10.pfb><cmmi7.pfb><cmr10.pfb>] )
+Preloading the plain mem file, version 1.005) ) (./D.mp (./s.mp [1{psfonts.map}
+<cmmi10.pfb><cmr7.pfb><cmsy10.pfb><cmmi7.pfb>]) [1<cmmi10.pfb><cmr7.pfb><cmmi7.
+pfb><cmr10.pfb>] )
 2 output files written: D_1.eps .. D_1.eps
 

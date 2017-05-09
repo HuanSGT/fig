@@ -1,18 +1,18 @@
-2A_n + B_n
+2\beta_n^0 + \beta_n^1
 2
 0 1 0   0 0 0   0 0 0
 rot no
 0 0 1   0 0 0   0 0 0
 rot no
 
-2A_n + C_n
+2\beta_n^0 + \beta_n^2
 2
 1 1 0   0 0 0   0 0 0
 rot no
 1 0 1   0 0 0   0 0 0
 rot no
 
-A_n + 2B_n
+\beta_n^0 + 2\beta_n^1
 4
 0 0 0   1 0 0   0 1 0
 rot no

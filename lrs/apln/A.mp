@@ -19,11 +19,11 @@ beginfig(1)
 	pair coor;
 
     coor := (0,0);
-	label.lft(btex $3A_n:$ etex scaled eq_scale, coor + dxx);
+	label.lft(btex $3\beta_n^0:$ etex scaled eq_scale, coor + dxx);
 	drawG  (coor + 0dx, 0,0,0,0,0,0,0,0,0);
 
 	coor := coor + dy;
-	label.lft(btex $2A_n + B_n:$ etex scaled eq_scale, coor + dxx);
+	label.lft(btex $2\beta_n^0 + \beta_n^1:$ etex scaled eq_scale, coor + dxx);
 	drawG  (coor + 0dx, 1,0,0,0,0,0,0,0,0);
 	drawG  (coor + 1dx, 0,0,0,1,0,0,0,0,0);
 	drawG  (coor + 2dx, 0,0,0,0,0,0,1,0,0);

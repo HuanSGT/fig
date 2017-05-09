@@ -59,7 +59,7 @@ vardef drawC(expr locC, col) =
     elseif col = 3:
         drawCircle(locC, green, black, di);
     elseif col = 4:
-        drawCircle(locC, blue, black, di);
+        drawCircle(locC, white, black, di);
     elseif col = 5:
         drawCircle(locC, yellow, black, di);
     fi
@@ -90,7 +90,7 @@ widthG = 2 * len + line + 25u;
 heightG = 2 * leny + liney + 20u;
 
 pair dx, dy, dxx, dyy;
-dx  := (widthG, 0);
+dx  := (0.925widthG, 0);
 dy  := (0, -heightG - 7.5u);
 dyy := (0, -heightG + 2.5u);
 dxx := (- lenx - 35u, - 0.45heightG);
@@ -211,11 +211,11 @@ vardef drawH(expr locH,
     drawLine(loccH0 + (len, - 2 * leny), loccH2, 1,1);
     drawLine(loccH1 + (len + linex, - 2 * leny - liney), loccH2 + (-len - linex,- 2 * leny - liney), 1,1);
 
-    %drawLine(loccH0, loccH3, 1,1);
-    %drawLine(loccH1 + (- len - linex, - 2 * leny - liney), loccH3, 1,1);
-    %drawLine(loccH2 + (len + linex,- 2 * leny - liney), loccH3, 1,1);
+    drawLine(loccH0, loccH3, 1,1);
+    drawLine(loccH1 + (- len - linex, - 2 * leny - liney), loccH3, 1,1);
+    drawLine(loccH2 + (len + linex,- 2 * leny - liney), loccH3, 1,1);
 
-    %drawC(loccH3, 3);
+    drawlC(loccH3, j, btex S etex scaled ls, 3);
 
     drawlG(loccH0, a,b,c,   d,e,f,   g,h,i,
             la,lb,lc,   ld,le,lf,   lg,lh,li,
