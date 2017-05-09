@@ -92,7 +92,9 @@ vardef drawllH(expr locH,
 
 enddef;
 
-beginfig(0)
+as := 1.5;
+
+beginfig(1)
     pickup pencircle scaled default_scale;
     
     ls := 1.1;
@@ -111,9 +113,19 @@ beginfig(0)
             btex \textbf{C} etex scaled ls, btex \textbf{C} etex scaled ls, btex \textbf{C} etex scaled ls, 
             btex  etex scaled ls, btex  etex scaled ls, btex \textbf{C} etex scaled ls
             );
+    ahlength := 3u; ahangle := 60;
+    drawarrow (-0.6widthG,-1.75heightG) -- (-0.25widthG,-1.75heightG) withpen pencircle scaled 2.5;
+    pair ax,ay,az, deltax;
+    ax := (-0.58widthG,-1.62heightG);
+    ay := (-0.23widthG,-1.62heightG);
+    az := (-0.78widthG,-1.62heightG);
+    ax := az + ((ax - az) rotated 60);
+    ay := az + ((ay - az) rotated 60);
+    deltax := (-0.5widthT,0.15heightT);
+    drawarrow  (ax + deltax) -- (ay + deltax) withpen pencircle scaled 2.5;
 endfig;
 
-beginfig(1)
+beginfig(0)
     pickup pencircle scaled default_scale;
     
     ls := 1.1;
@@ -153,28 +165,28 @@ beginfig(1)
             1,1,1,  1,1,1,  1,1,1,
             1,1,1,  1,1,1,  1,1,1,
             1,1,1,  1,1,1,  1,1,1, 1,
-            btex \textbf{I} etex scaled ls, btex \textbf{D} etex scaled ls, btex \textbf{D} etex scaled ls, 
-            btex \textbf{D} etex scaled ls, btex \textbf{I} etex scaled ls, btex \textbf{D} etex scaled ls, 
+            btex \textbf{D} etex scaled ls, btex \textbf{D} etex scaled ls, btex \textbf{I} etex scaled ls, 
+            btex \textbf{D} etex scaled ls, btex \textbf{D} etex scaled ls, btex \textbf{I} etex scaled ls, 
+            btex \textbf{C} etex scaled ls, btex \textbf{C} etex scaled ls, btex \textbf{C} etex scaled ls, 
+            btex \textbf{D} etex scaled ls, btex \textbf{D} etex scaled ls, btex \textbf{I} etex scaled ls, 
             btex \textbf{D} etex scaled ls, btex \textbf{D} etex scaled ls, btex \textbf{I} etex scaled ls, 
             btex \textbf{C} etex scaled ls, btex \textbf{C} etex scaled ls, btex \textbf{C} etex scaled ls, 
             btex \textbf{I} etex scaled ls, btex \textbf{D} etex scaled ls, btex \textbf{D} etex scaled ls, 
-            btex \textbf{I} etex scaled ls, btex \textbf{D} etex scaled ls, btex \textbf{D} etex scaled ls, 
-            btex \textbf{C} etex scaled ls, btex \textbf{C} etex scaled ls, btex \textbf{C} etex scaled ls, 
-            btex \textbf{I} etex scaled ls, btex \textbf{D} etex scaled ls, btex \textbf{D} etex scaled ls, 
-            btex \textbf{I} etex scaled ls, btex \textbf{D} etex scaled ls, btex \textbf{D} etex scaled ls);
+            btex \textbf{D} etex scaled ls, btex \textbf{I} etex scaled ls, btex \textbf{D} etex scaled ls, 
+            btex \textbf{D} etex scaled ls, btex \textbf{D} etex scaled ls, btex \textbf{I} etex scaled ls);
 
     drawllH((widthH,-heightH),
             1,1,1,  1,1,1,  1,1,1,
             1,1,1,  1,1,1,  1,1,1,
             1,1,1,  1,1,1,  1,1,1, 1,
-            btex \textbf{D} etex scaled ls, btex \textbf{I} etex scaled ls, btex \textbf{D} etex scaled ls, 
             btex \textbf{C} etex scaled ls, btex \textbf{C} etex scaled ls, btex \textbf{C} etex scaled ls, 
-            btex \textbf{D} etex scaled ls, btex \textbf{I} etex scaled ls, btex \textbf{D} etex scaled ls, 
+            btex \textbf{I} etex scaled ls, btex \textbf{D} etex scaled ls, btex \textbf{D} etex scaled ls, 
             btex \textbf{I} etex scaled ls, btex \textbf{D} etex scaled ls, btex \textbf{D} etex scaled ls, 
             btex \textbf{D} etex scaled ls, btex \textbf{I} etex scaled ls, btex \textbf{D} etex scaled ls, 
-            btex \textbf{D} etex scaled ls, btex \textbf{D} etex scaled ls, btex \textbf{I} etex scaled ls, 
-            btex \textbf{D} etex scaled ls, btex \textbf{I} etex scaled ls, btex \textbf{D} etex scaled ls, 
             btex \textbf{C} etex scaled ls, btex \textbf{C} etex scaled ls, btex \textbf{C} etex scaled ls, 
-            btex \textbf{D} etex scaled ls, btex \textbf{I} etex scaled ls, btex \textbf{D} etex scaled ls);
+            btex \textbf{D} etex scaled ls, btex \textbf{I} etex scaled ls, btex \textbf{D} etex scaled ls, 
+            btex \textbf{D} etex scaled ls, btex \textbf{D} etex scaled ls, btex \textbf{I} etex scaled ls, 
+            btex \textbf{D} etex scaled ls, btex \textbf{D} etex scaled ls, btex \textbf{I} etex scaled ls, 
+            btex \textbf{C} etex scaled ls, btex \textbf{C} etex scaled ls, btex \textbf{C} etex scaled ls);
 endfig;
 end;
