@@ -150,8 +150,8 @@ vardef drawlT(expr locT, cola, colb, colc, la,lb,lc, qa,qb,qc) =
     draw loccT1 .. loccT2;% withcolor colour;
 
     drawlC(loccT0, cola, la, qa);
-    drawlC(loccT1, cola, lb, qb);
-    drawlC(loccT2, cola, lc, qc);
+    drawlC(loccT1, colb, lb, qb);
+    drawlC(loccT2, colc, lc, qc);
 
 enddef;
 
@@ -190,10 +190,17 @@ vardef drawH(expr locH,
     loccH0 := locH;
     loccH1 := loccH0 + (- llinex - linex - len, - lliney - liney - 2 * leny);
     loccH2 := loccH0 + (  llinex + linex + len, - lliney - liney - 2 * leny);
+    loccH3 := 0.5[loccH1,loccH2] + (0, -liney - 2*leny - 2*leny - liney);
 
     drawLine(loccH0 + (- len, - 2 * leny), loccH1, 1,1);
     drawLine(loccH0 + (len, - 2 * leny), loccH2, 1,1);
     drawLine(loccH1 + (len + linex, - 2 * leny - liney), loccH2 + (-len - linex,- 2 * leny - liney), 1,1);
+
+    drawLine(loccH0, loccH3, 1,1);
+    drawLine(loccH1 + (- len - linex, - 2 * leny - liney), loccH3, 1,1);
+    drawLine(loccH2 + (len + linex,- 2 * leny - liney), loccH3, 1,1);
+
+    drawC(loccH3, 3);
 
     drawlG(loccH0, a,b,c,   d,e,f,   g,h,i,
             la,lb,lc,   ld,le,lf,   lg,lh,li,
