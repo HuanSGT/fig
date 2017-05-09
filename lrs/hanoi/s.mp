@@ -50,7 +50,7 @@ color yellow;
 yellow := (1,1,0);
 
 vardef drawC(expr locC, col) =
-    if col = 0:
+    if (col = 0) or (col = 9):
         drawCircle(locC, white,  black, di);
     elseif col = 1:
         drawCircle(locC, black,  black, di);
@@ -118,6 +118,21 @@ vardef drawG(expr locTT, a,b,c, d,e,f, g,h,i) =
     drawLine(loccTT0 + (- lenx, - leny), loccTT1, b,d);
     drawLine(loccTT0 + (lenx, - leny), loccTT2, c,g);
     drawLine(loccTT1 + (lenx, -leny), loccTT2 + (-lenx,-leny), f,h);
+
+    drawT(loccTT0, a,b,c);
+    drawT(loccTT1, d,e,f);
+    drawT(loccTT2, g,h,i);
+enddef;
+
+vardef drawGNL(expr locTT, a,b,c, d,e,f, g,h,i) =
+    pair loccTT[];
+    loccTT0 := locTT;
+    loccTT1 := loccTT0 + (- linex - lenx, - liney - leny);
+    loccTT2 := loccTT0 + (linex +  lenx, - liney - leny);
+
+    %drawLine(loccTT0 + (- lenx, - leny), loccTT1, b,d);
+    %drawLine(loccTT0 + (lenx, - leny), loccTT2, c,g);
+    %drawLine(loccTT1 + (lenx, -leny), loccTT2 + (-lenx,-leny), f,h);
 
     drawT(loccTT0, a,b,c);
     drawT(loccTT1, d,e,f);
@@ -196,11 +211,11 @@ vardef drawH(expr locH,
     drawLine(loccH0 + (len, - 2 * leny), loccH2, 1,1);
     drawLine(loccH1 + (len + linex, - 2 * leny - liney), loccH2 + (-len - linex,- 2 * leny - liney), 1,1);
 
-    drawLine(loccH0, loccH3, 1,1);
-    drawLine(loccH1 + (- len - linex, - 2 * leny - liney), loccH3, 1,1);
-    drawLine(loccH2 + (len + linex,- 2 * leny - liney), loccH3, 1,1);
+    %drawLine(loccH0, loccH3, 1,1);
+    %drawLine(loccH1 + (- len - linex, - 2 * leny - liney), loccH3, 1,1);
+    %drawLine(loccH2 + (len + linex,- 2 * leny - liney), loccH3, 1,1);
 
-    drawC(loccH3, 3);
+    %drawC(loccH3, 3);
 
     drawlG(loccH0, a,b,c,   d,e,f,   g,h,i,
             la,lb,lc,   ld,le,lf,   lg,lh,li,
@@ -245,5 +260,3 @@ beginfig(1)
     
 
 endfig;
-
-end;

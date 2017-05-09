@@ -162,15 +162,15 @@ beginfig(1)
     drawGl((0,0), btex $X_3$ etex scaled vs,
                      btex $Y_3$ etex scaled vs,
                      btex $Z_3$ etex scaled vs,
-                     btex $A_n^3$ etex scaled gen_scale,
+                     btex $\mathcal{A}_n^3$ etex scaled gen_scale,
                      btex $X_1$ etex scaled vs,
                      btex $Y_1$ etex scaled vs,
                      btex $Z_1$ etex scaled vs,
-                     btex $A_n^1$ etex scaled gen_scale,
+                     btex $\mathcal{A}_n^1$ etex scaled gen_scale,
                      btex $X_2$ etex scaled vs,
                      btex $Y_2$ etex scaled vs,
                      btex $Z_2$ etex scaled vs,
-                     btex $A_n^2$ etex scaled gen_scale);
+                     btex $\mathcal{A}_n^2$ etex scaled gen_scale);
 
     label(btex $\Rightarrow$ etex xscaled 3.5 yscaled 5, (1.15widthT, 0.5heightT));
 
@@ -178,15 +178,15 @@ beginfig(1)
     drawGl((2.2widthT,0), btex $O$ etex scaled vs,
                      btex $Y$ etex scaled vs,
                      btex $Z$ etex scaled vs,
-                     btex $A_n^3$ etex scaled gen_scale,
+                     btex $\mathcal{A}_n^3$ etex scaled gen_scale,
                      btex $$ etex scaled vs,
                      btex $$ etex scaled vs,
                      btex $$ etex scaled vs,
-                     btex $A_n^1$ etex scaled gen_scale,
+                     btex $\mathcal{A}_n^1$ etex scaled gen_scale,
                      btex $$ etex scaled vs,
                      btex $$ etex scaled vs,
                      btex $$ etex scaled vs,
-                     btex $A_n^2$ etex scaled gen_scale);
+                     btex $\mathcal{A}_n^2$ etex scaled gen_scale);
     label(btex $X$ etex scaled vs, (2.2widthT, 2heightT + 1.15di));
 
 endfig;
