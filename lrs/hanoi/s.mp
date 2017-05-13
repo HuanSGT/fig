@@ -211,11 +211,11 @@ vardef drawH(expr locH,
     drawLine(loccH0 + (len, - 2 * leny), loccH2, 1,1);
     drawLine(loccH1 + (len + linex, - 2 * leny - liney), loccH2 + (-len - linex,- 2 * leny - liney), 1,1);
 
-    %drawLine(loccH0, loccH3, 1,1);
-    %drawLine(loccH1 + (- len - linex, - 2 * leny - liney), loccH3, 1,1);
-    %drawLine(loccH2 + (len + linex,- 2 * leny - liney), loccH3, 1,1);
+    drawLine(loccH0, loccH3, 1,1);
+    drawLine(loccH1 + (- len - linex, - 2 * leny - liney), loccH3, 1,1);
+    drawLine(loccH2 + (len + linex,- 2 * leny - liney), loccH3, 1,1);
 
-    %drawlC(loccH3, j, btex S etex scaled ls, 3);
+    drawlC(loccH3, j, btex $s$ etex scaled ls, 3);
 
     drawlG(loccH0, a,b,c,   d,e,f,   g,h,i,
             la,lb,lc,   ld,le,lf,   lg,lh,li,

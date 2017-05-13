@@ -71,7 +71,7 @@ vardef drawllH(expr locH,
     la__,lb__,lc__,   ld__,le__,lf__,   lg__,lh__,li__
     ) =
 
-    label(btex $\mathcal{H}_n^i$ etex scaled 2.5,locH + (0, -heightG));
+    label(btex $\mathcal{H}_{n + 2}$ etex scaled 2.5,locH + (0, -heightG));
     pair loccH[];
     loccH0 := locH;
     loccH1 := loccH0 + (- llinex - linex - len, - lliney - liney - 2 * leny);
@@ -94,27 +94,31 @@ enddef;
 
 as := 1.5;
 
+di := di * 1.5;
+
+ls := 1.6;
+
+circle_scale := 1.5;
+
 beginfig(1)
     pickup pencircle scaled default_scale;
     
-    ls := 1.1;
-    circle_scale := 1.5;
     drawllH((0,0),
             2,0,1,  1,1,1,  1,1,1,
             1,1,1,  1,2,1,  1,1,1,
             1,1,1,  1,1,1,  1,1,2, 1,
-            btex \textbf{I} etex scaled ls, btex $\bigstar$ etex scaled 2, btex etex scaled ls, 
+            btex \textbf{I} etex scaled ls, btex $\bigstar$ etex scaled 2.5, btex etex scaled ls, 
             btex \textbf{C} etex scaled ls, btex \textbf{C} etex scaled ls, btex \textbf{C} etex scaled ls, 
             btex  etex scaled ls, btex  etex scaled ls, btex  etex scaled ls, 
             btex \textbf{I} etex scaled ls, btex \textbf{D} etex scaled ls, btex \textbf{D} etex scaled ls, 
             btex \textbf{D} etex scaled ls, btex \textbf{I} etex scaled ls, btex \textbf{D} etex scaled ls, 
-            btex \textbf{D} etex scaled ls, btex \textbf{D} etex scaled ls, btex \textbf{I} etex scaled ls, 
+            btex etex scaled ls, btex etex scaled ls, btex etex scaled ls, 
             btex  etex scaled ls, btex  etex scaled ls, btex  etex scaled ls, 
-            btex \textbf{C} etex scaled ls, btex \textbf{C} etex scaled ls, btex \textbf{C} etex scaled ls, 
+            btex etex scaled ls, btex etex scaled ls, btex etex scaled ls, 
             btex  etex scaled ls, btex  etex scaled ls, btex \textbf{C} etex scaled ls
             );
     ahlength := 3u; ahangle := 60;
-    drawarrow (-0.6widthG,-1.75heightG) -- (-0.25widthG,-1.75heightG) withpen pencircle scaled 2.5;
+    %drawarrow (-0.6widthG,-1.75heightG) -- (-0.25widthG,-1.75heightG) withpen pencircle scaled 2.5;
     pair ax,ay,az, deltax;
     ax := (-0.58widthG,-1.62heightG);
     ay := (-0.23widthG,-1.62heightG);
@@ -128,8 +132,6 @@ endfig;
 beginfig(0)
     pickup pencircle scaled default_scale;
     
-    ls := 1.1;
-    circle_scale := 1.5;
     widthH := 1.80 * widthG;
     heightH := 2 * heightG;
 

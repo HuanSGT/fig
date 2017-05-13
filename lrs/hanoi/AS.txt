@@ -18,7 +18,7 @@ rot no
 0 1 0   1 0 0   0 0 0
 rot no
 
-\beta_n^0 + B_n* + \beta_n^2 + 1
+\beta_n^0 + \beta_n^1 + \beta_n^2 + 1
 1
 0 1 1   1 0 0   0 0 0
 rot flip

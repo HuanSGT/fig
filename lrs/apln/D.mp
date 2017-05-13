@@ -37,6 +37,15 @@ beginfig(1)
 	drawG  (coor + 5dx, 0,0,1,1,1,1,0,0,0);
 
 	coor := coor + dy;
+	label.lft(btex $\beta_n^0 + 2\beta_n^2:$ etex scaled eq_scale, coor + dxx);
+	drawG  (coor + 0dx, 0,0,0,0,1,1,1,0,1);
+	drawG  (coor + 1dx, 0,0,0,1,0,1,0,1,1);
+	drawG  (coor + 2dx, 1,1,0,0,0,0,0,1,1);
+	drawG  (coor + 3dx, 1,0,1,0,1,1,0,0,0);
+	drawG  (coor + 4dx, 0,1,1,1,1,0,0,0,0);
+	drawG  (coor + 5dx, 0,1,1,0,0,0,1,1,0);
+
+	coor := coor + dy;
 	label.lft(btex $3\beta_n^1:$ etex scaled eq_scale, coor + dxx);
 	drawG  (coor + 0dx, 0,1,0,0,1,0,0,0,1);
 	drawG  (coor + 1dx, 0,0,1,0,0,1,0,1,0);
