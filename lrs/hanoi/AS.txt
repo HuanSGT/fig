@@ -3,46 +3,6 @@
 0 0 0   0 0 0   0 0 0
 no no
 
-2\beta_n^0 + \beta_n^1 + 2
-1
-0 1 0   0 0 0   0 0 0
-rot flip
-
-2\beta_n^0 + \beta_n^2 + 1
-1
-0 1 1   0 0 0   0 0 0
-rot no
-
-\beta_n^0 + 2\beta_n^1 + 2
-1
-0 1 0   1 0 0   0 0 0
-rot no
-
-\beta_n^0 + \beta_n^1 + \beta_n^2 + 1
-1
-0 1 1   1 0 0   0 0 0
-rot flip
-
-\beta_n^0 + 2\beta_n^2
-1
-0 1 1   0 0 1   0 0 0
-rot flip
-
-3\beta_n^1 + 1
-1
-0 1 0   1 0 0   0 1 0
-rot flip
-
-2\beta_n^1 + \beta_n^2 + 1
-1
-0 1 1   1 0 0   1 0 0
-rot no
-
-\beta_n^1 + 2\beta_n^2
-1
-0 1 0   1 0 1   1 1 0
-rot flip
-
 3\beta_n^2
 1
 0 1 1   1 0 1   1 1 0

@@ -79,8 +79,9 @@ gapy := di;% + 1u;
 widthG = widthT + 25u;
 heightG = widthT + 20u;
 
-pair dx, dy, dxx, dyy, dz, dzz;
+pair dx, dy, dxx, dyy, dz, dzz, dxs;
 dx  := (widthG * 1.3, 0);
+dxs := (widthG, 0);
 dy  := (0, -heightG - 7.5u);
 dz  := (0, - heightT - 5u);
 dzz := (0.5widthG, 0);

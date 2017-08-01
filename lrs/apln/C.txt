@@ -9,27 +9,25 @@ rot no
 rot flip
 1 1 0   0 0 0   0 0 1
 rot flip
-1 1 0   0 0 0   0 1 0
+0 0 0   0 0 1   1 0 1
 rot flip
-1 1 0   0 1 0   0 0 0
+0 1 0   0 0 0   1 0 1
 rot flip
 
 3\beta_n^1
 3
-0 1 0   0 1 0   1 0 0
+0 1 0   1 0 0   0 0 1
 rot no
-0 0 1   0 1 0   1 0 0
+0 1 0   1 0 0   0 1 0
 rot no
 0 0 1   0 0 1   1 0 0
 rot no
 
 \beta_n^0 + 2\beta_n^1
-3
-0 1 0   0 1 0   0 0 0
-rot no
-0 0 1   0 1 0   0 0 0
-rot no
-0 0 1   0 0 1   0 0 0
+2
+0 1 0   0 0 0   0 0 1
+rot flip
+0 0 0   0 0 1   0 0 1
 rot no
 
 2\beta_n^0 + \beta_n^2

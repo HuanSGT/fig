@@ -89,9 +89,11 @@ gapy := di;% + 1u;
 widthG = 2 * len + line + 25u;
 heightG = 2 * leny + liney + 20u;
 
-pair dx, dy, dxx, dyy;
+pair dx, dy, dxx, dyy, dz, dzz, dxs;
 dx  := (0.925widthG, 0);
+dxs := (widthG, 0);
 dy  := (0, -heightG - 7.5u);
+dz  := (0, - 0.75heightG - 5u);
 dyy := (0, -heightG + 2.5u);
 dxx := (- lenx - 35u, - 0.45heightG);
 
