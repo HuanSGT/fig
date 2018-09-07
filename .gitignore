@@ -1,1 +1,5 @@
 .*.swp
+.DS_Store
+*.log
+*.mpx
+*.eps
